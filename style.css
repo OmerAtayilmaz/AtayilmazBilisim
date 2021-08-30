@@ -184,6 +184,9 @@
     .operations__tab{
         font-size: 0.8rem !important;
     }
+    .operations__content p{
+        font-size:0.6rem !important;
+    }
 }
 
 
