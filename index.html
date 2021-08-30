@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atayılmaz Bilişim Hizmetleri</title>
+    <link rel="shortcut icon" type="image/png" href="./imgs/favicon.ico"/>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+    <!--icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!--CSS Files-->
+    <link rel="stylesheet" hreF="style.css">
+
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row custom-banner">
+          <div class="col-md-2   d-flex align-items-center justify-content-center pt-3">
+              <a class="btn-custom pt-2" href="https://docs.google.com/forms/d/e/1FAIpQLSeoZaKtfKyS6iGdYk-S4B5iDUPvLnKLtI9fCg7ukmFV-vIULg/viewform" target="_blank">Teklif Al</a>
+          </div>
+          <div class="col-md-8 col-md-8 ">
+              <img src="./imgs/font-logo.png" class="img-fluid"/>
+          </div>
+          <div class="col-md-2 col-md-2 d-flex align-items-center justify-content-center pb-3">
+            <a class="btn-custom pt-2" href="https://docs.google.com/forms/d/e/1FAIpQLSfMSczk0PS-Z9ESRn5WR37wH9_pdNCWCSLxzXjo1Z-0_hpoBA/viewform" target="_blank">Bizimle Çalış</a>
+            </div>
+        </div>
+    </div>
+     
+    <!--Navbar=>Anasayfa,Hizmetlerimiz,Projelerimiz,İletişim,-->
+    <nav class="navbar navbar-expand-lg  bg-custom-nav navbar-light sticky-top m-0 p-0">    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse bg-custom-nav" id="navbarSupportedContent">
+          <ul class="navbar nav mr-left">
+            <a class="navbar-brand" href="#">
+                <img style="width:85px;height:85px;" src="./imgs/logo-transparent-512-2.png"/>
+            </a>
+          </ul>
+          <ul class="navbar-nav  mx-auto">
+            <li class="nav-item ">
+              <a href="#home" class="nav-link active d-flex justify-content-center flex-column align-items-center" href="#">
+                <i class="fas fa-home"></i>
+                <span>Anasayfa</span>
+                <div class="line"></div>
+              </a>
+            </li>
+       
+            <li class="nav-item ">
+              <a href="#mission" class="nav-link active d-flex justify-content-center flex-column align-items-center" href="#">
+                <i class="fas fa-project-diagram"></i>
+                <span>Misyonumuz</span>
+                <div class="line"></div>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a href="#services" class="nav-link active d-flex justify-content-center flex-column align-items-center" href="#">
+                <i class="fas fa-tasks"></i>
+                <span>Hizmetler</span>
+                <div class="line"></div>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a href="#projects" class="nav-link active d-flex justify-content-center flex-column align-items-center" href="#">
+                <i class="fas fa-tablet-alt"></i>
+                <span>Projeler</span>
+                <div class="line"></div>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a href="#contact" class="nav-link active d-flex justify-content-center flex-column align-items-center" href="#">
+                <i class="fas fa-paper-plane"></i>
+                <span>İletişim</span>
+                <div class="line"></div>
+              </a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+      <a href="https://wa.me/+905511841517" class="whatsapp_float" target="_blank"> <i class="fab fa-whatsapp whatsapp-icon"></i></a>
+     <div class="container-fluid">
+       <section id="home">
+          <div class="row p-5">     
+              <div class="col-md-5  d-flex justify-content-center align-items-center">
+                  <span class="txt-prg">
+                    <h4 class="txt-custom">Kaliteli ürün, özgün tasarım ve yenilikçi teknolojisiyle</span> <b class="txt-title">ATAYILMAZ BILISIM</b> sizin için burada. </h4>
+                      <a id="btn-home" href="#mission" class="mt-3 btn-custom py-2 px-4">Devam >></a>
+                  </span>
+                  
+              </div>
+              <div class="col-md-5 offset-2 mt-5">
+                  <img src="./imgs/p8.png"  class="img-fluid"/>
+              </div>
+          </div>
+      </section>
+      <section id="mission"> 
+        <h4 class="txt-custom">Teknoloji dünyasındaki yeriniz hazır.</h4>
+        <hr>
+        <div class="row">
+           
+            <div class="col-md-4 offset-1  d-flex align-items-left align-items-center">
+               <span  class="txt-prg"> Geliştirdiğimiz web ve mobil uygulama projelerinde en güncel yazılımları ve teknolojileri kullanmaya özen gösteriyoruz. Günümüzde Wordpress, JavaScript ve JS frameworkleri gibi popüler teknolojiler kullanılmakta ve projeleriniz bugünün ve geleceğin şartlarını karşılayacak şekilde dizayn ediliyor. 
+               <hr>
+            </span>
+             
+            </div>
+            <div class="col-md-6 offset-1">
+                <img src="./imgs/p1.png" class="img-fluid "/>
+            </div>
+            
+            <div class="col-md-6 offset-1">
+                <img src="./imgs/p2.png" class="img-fluid p-5"/>
+            </div>
+            
+            <div class="col-md-4 offset-1 d-flex align-items-center">
+                <span  class="txt-prg"> Projenizin tasarım, güvenlik ve kullanıcı testleri yapılır. Sizin tarif ettiğiniz tasarım elde edilir, gerekli düzenlemeler yapılır. Web siteniz veya mobil uygulamanızı hak ettiğiniz şekilde, tam donanımlı ve en iyi versiyonuyla teslim ediyoruz.
+                <hr>
+               </span>
+             </div>
+             <div class="col-md-4 offset-1 d-flex align-items-center">
+                <span  class="txt-prg"> Projeniz bitti. Artık kullanıcılarla etkileşim halindesiniz, kullanıcıların istediği herhangi bir fonksiyonu websitenize eklemek istiyorsanız, istediğiniz zaman tekrar bize ulaşıp gerekli gördüğünüz güncellemeleri bildirebilirsiniz.<b> ATAYILMAZ Bilişim </b> 7/24 hizmetlerinizdedir.
+                <hr>
+               </span>
+             </div>
+            <div class="col-md-6 offset-1">
+                <img src="./imgs/p3.png" class="img-fluid" width="400"/>
+            </div>
+        </div>
+      </section>
+      <section id="services">
+        <h4 class="txt-custom ">Hizmetlerimiz.</h4>
+        <hr>
+        <div class="row d-flex justify-content-center">
+            <div class="card card-hizmet text-white m-3">
+                <img class="card-img" style="width:300px" src="./imgs/p4.png" alt="Card image">
+                <div class="card-img-overlay d-flex align-items-center justify-content-center flex-column">
+                  <h5 class="card-title text-primary mt-5 pt-5">Mobil Uygulama</h5>
+                  <p class="card-text text-muted text-center p-5">Aklınızdakini gerçeğe dönüştürüyoruz.</p>
+                </div>
+            </div>
+            <div class="card card-hizmet text-white m-3">
+                <img class="card-img" style="width:300px" src="./imgs/p5.png" alt="Card image">
+                <div class="card-img-overlay d-flex align-items-center justify-content-center flex-column">
+                  <h5 class="card-title text-primary">Web Tasarım</h5>
+                  <p class="card-text text-muted text-center p-5">İşletmenizi büyütün.</p>
+                </div>
+            </div>
+            <div class="card card-hizmet text-white m-3">
+                <img class="card-img" style="width:300px" src="./imgs/p6.png" alt="Card image">
+                <div class="card-img-overlay d-flex align-items-center justify-content-center flex-column">
+                  <h5 class="card-title text-primary">E-Ticaret</h5>
+                  <p class="card-text text-muted text-center p-5">E-ticaret ile kazancınızı katlayın.</p>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section id="projects">
+        <h4 class="txt-custom ">Projelerimiz.</h4>
+        <hr>
+        <div class="row d-flex justify-content-center">
+            <div class="card card-projects bg-dark text-white m-3">
+                <img class="card-img" style="width:300px" src="./imgs/p7.png" alt="Card image">
+                <div class="card-img-overlay text-dark d-flex justify-content-center align-items-center">
+                  <span>Project Name</span>
+                </div>
+            </div>
+            <div class="card card-projects bg-dark text-white m-3">
+                <img class="card-img" style="width:300px" src="./imgs/p7.png" alt="Card image">
+                <div class="card-img-overlay text-dark d-flex justify-content-center align-items-center">
+                  <span>Project Name</span>
+                </div>
+            </div>
+            <div class="card card-projects bg-dark text-white m-3">
+                <img class="card-img" style="width:300px" src="./imgs/p7.png" alt="Card image">
+                <div class="card-img-overlay text-dark d-flex justify-content-center align-items-center">
+                  <span>Project Name</span>
+                </div>
+            </div>
+        </div>
+      </section>
+        <h4 class="txt-custom ">Aşamalar.</h4>
+        <hr>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12 d-flex align-items-center justify-content-center operations__tab-container">
+                <button
+                  class="btn operations__tab operations__tab--1 operations__tab--active"
+                  data-tab="1"
+                >
+                  <span>01</span> Dökümanlar Alınır.
+                </button>
+                <button class="btn operations__tab operations__tab--2" data-tab="2">
+                  <span>02</span> Website Yapılır.
+                </button>
+                <button class="btn operations__tab operations__tab--3" data-tab="3">
+                  <span>03</span> Teslim Edilir.
+                </button>
+            </div>
+       </div>
+       <div class="row d-flex justify-content-center">
+        <div class="operations col-md-8">
+            <div class="operations__content operations__content--1 operations__content--active">
+              <h5 class="operations__header">
+                Döküman, belgeler ve istenilen veriler alınır.
+              </h5>
+              <p>
+                Bu aşamada sizlere gösterdiğimiz şablonlardan veya sizin elinizde bulundurduğunuz şablonlardan/temalardan
+                bir website taslağı çıkartılır. Websitede girilecek veriler belirlenir (örneğin; işletmenizin konumu, telefon numarası, vs.). Şablonlar hazırlandıktan sonra yapım aşamasına geçilir.
+              </p>
+            </div>
+      
+            <div class="operations__content operations__content--2">
+         
+              <h5 class="operations__header">
+                Yapım aşamasıdır.
+              </h5>
+              <p>
+                Websiteler belirli adımlarla inşa edilir. Birinci adım "ne inşa edileceği" idi ve döküman belirlemede yapılır. Sonraki adım tasarımın yapılmasıdır. Front-end kısmı yani kullanıcıların gördüğü tasarımlar bittikten sonra arka
+                plandaki veri üzerine işlem yapan kodlar yazılır.Sonra websitede gerekli güvenlik ve açık testleri yapılır. Bu işlemler gerçekleşirken gerekli bilgilendirmeler sırasıyla yapılır.
+              </p>
+            </div>
+            <div class="operations__content operations__content--3">
+              <h5 class="operations__header">
+                Proje teslimatı 
+              </h5>
+              <p>
+                Projenin testlerini geçtiği taktirde "teslim alınabilir" duruma gelmiştir. Akabinde websiteniz size teslim edilir.🚩 
+              </p>
+            </div>
+          </div>
+       </div>
+   </div>
+        <h4 class="txt-custom">Alanında uzman ekibimiz, sizin için çalışıyor.</h4>
+        <hr>
+        <div class="row">
+          <div class="col-md-3 offset-1">
+            <div class="content-person">
+              <div class="card-person">
+                <div class="imgBx">
+                  <img src="./imgs/person1.jpg" class="img-fluid"/>
+                </div>
+                <div class="contentBx">
+                  <h3>Ömer Atayilmaz<br><span>Co-Founder</span></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="col-md-3 offset-1">
+              <div class="content-person">
+                <div class="card-person">
+                  <div class="imgBx">
+                    <img src="./imgs/person2.jpg" class="img-fluid"/>
+                  </div>
+                  <div class="contentBx">
+                    <h3>Furkan Sünger<br><span>Full Stack Developer</span></h3>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-3 offset-1">
+              <div class="content-person">
+                <div class="card-person">
+                  <div class="imgBx">
+                    <img src="./imgs/person3.jpg" class="img-fluid"/>
+                  </div>
+                  <div class="contentBx">
+                    <h3>Mustafa Pancar<br><span>Designer</span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+     </div>
+     
+     <section id="contact">
+        <div class="container-fluid">
+            <h4 class="txt-custom ">Bize Ulaş.</h4>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+                <form method="POST" action="https://formsubmit.co/atay.omer33@gmail.com"  class="mt-5 mr-3 ml-3">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_template" value="box">
+                  <input type="hidden" name="_subject" value="Atayilmaz Bilişim - Müşteri Maili">
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text txt-label">İsim</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Ad">
+                    <input type="text" class="form-control" placeholder="Soyad">
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter email" id="demo" name="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="comment">Mesaj:</label>
+                    <textarea style="resize: none;" class="form-control" name="message" rows="5" id="comment"></textarea>
+                  </div>
+                  <button type="submit" name="submit" class="btn btn-custom">Gönder</button>
+                </form>
+              </div>
+              <div class="col-md-6">
+                <div id="map"></div>
+              </div>
+
+
+
+
+            </div>
+        
+            <div class="row footer">
+              <div class="col-md-3 offset-1 mt-5 d-flex align-items-center justify-content-center">
+                <div class="content-about">
+                  <h4>ATAYILMAZ BILIŞIM</h4>
+                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod in tempora temporibus eos earum optio cupiditate, repudiandae magnam veniam laborum dolorem? Sit earum dolor voluptate enim corporis quibusdam odit saepe ad commodi explicabo.</span>
+                </div>
+              </div>
+              <div class="col-md-3 offset-1 mt-5 d-flex align-items-center justify-content-center">
+                <div class="content-subscribe">
+                  <h4>Kapmanyalar için bildirim al.</h4>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="E-mail">
+                    <div class="input-group-append">
+                      <button class="btn btn-custom" type="submit">ABONE OL</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 offset-1 mt-5 d-flex align-items-center justify-content-center">
+                <div class="sci">
+                  <ul class="list-group list-group-horizontal ">
+                   
+                    <a target="_blank" href="https://business.facebook.com/Atay%C4%B1lmaz-Bili%C5%9Fim-106930681717998/" class="list-group-item"><i class="fab fa-facebook-square"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/atayilmazbilisim/" class="list-group-item"><i class="fab  fa-instagram"></i></a>
+                    <a target="_blank" href="https://twitter.com/AtayilmazB" class="list-group-item"><i class="fab  fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/%C3%B6mer-atay%C4%B1lmaz-180006151/" class="list-group-item"><i class="fab fa-linkedin-in"></i></a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row footer-end">
+              <hr>
+              <div class="col-12 text-center ">  
+                <span>
+                  ATAYILMAZ Bilişim © Copyright 2020. All Rights Reserved - Bilgi Güvenliği Politikamız
+                </span>
+              </div>
+            </div>
+        </div>
+     </section>
+
+ 
+     <script src="main.js"></script>
+</body>
+</html>
