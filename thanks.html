@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+         <!--icons-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        /* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Dosis&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+       :root{
+        /* colors */
+        --blue:#0389FF;
+        --secondary-blue:#2673B8;
+        --dark-blue:#023047;
+        --dark:#0d1b2a;
+        --text-color:#aaccff;
+        --text-hover:#8faad3;
+
+        /* fonts */
+        --font-alison:'Allison',cursive;/* fansy */
+        --font-dosis:'Dosis',sans-serif;
+        --font-roboto:'Roboto',sans-serif;
+        --font-righteous:'Righteous', cursive;
+}
+body{background:linear-gradient(to right,var(--dark),var(--dark-blue));}
+
+.content{
+    border:2px solid #fff;
+    padding:15px;
+    margin-top:15px;
+}
+.content h2{
+    color:var(--blue);
+    font-family: var(--font-roboto);
+    letter-spacing: 5px;
+    font-size:2rem;
+    font-weight: 700;
+    padding:5px;
+}
+.content h3{
+    color:var(--text-color);
+    font-family: var(--font-dosis);
+    font-size: medium;
+    margin-bottom: 25px;
+}
+.content a{
+    background-color:var(--dark);
+    width:200px;
+    height: 50px;
+    font-family: var(--font-dosis);
+    text-align: center;
+    padding-top:12px;
+    text-decoration: none;
+    border-bottom:2px solid transparent;
+    color:var(--blue) !important;
+}
+.content a:hover{
+    transition: 0.5s;
+    border-bottom:2px solid #fff;
+    color:var(--secondary-blue) !important;
+}
+@media screen and (max-width:700px) {
+    .content h2{
+        font-size:1.2rem;
+    }
+    .content a{
+        width:100px;
+        height:25px;
+        font-size:1rem;    
+        padding-top:0;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row d-flex flex-column align-items-center">
+            <div class="col-4 content d-flex flex-column align-items-center justify-content-center">
+                <h2>Atayılmaz Bilişim</h2>
+                <h3>Mail başarıyla gönderildi.</h3>
+                <a href="index.html" >Anasayfa</a>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
