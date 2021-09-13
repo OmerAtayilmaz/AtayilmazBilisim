@@ -48,3 +48,51 @@ btnHome.addEventListener('click',function(e){
   sectionProjects.scrollIntoView({behavior:'smooth'})
 })
 
+/* send mail with model */
+const name=document.querySelector('#customerName');
+const email=document.querySelector('#customerMail');
+const services=document.querySelector('#customerService');
+const details=document.querySelector('#customerDetails');
+const btnTakeOffer=document.querySelector('#btnTakeOffer');
+const modalWarningText=document.querySelector('.warning-text');
+
+link="https://formsubmit.co/ajax/733423890dc33628d0d4a1aeb8679814";
+//link="zzzz";
+
+
+btnTakeOffer.addEventListener('click',async(e)=>{
+  e.preventDefault();
+  const mailData={
+    method:"POST",
+    headers:{
+      'Content-Type':'application/json',
+      'Accept':'application/json'
+    },
+    body:JSON.stringify({
+      type:"Offer",
+      name:name.value,
+      email:email.value,
+      services:services.value,
+      details:details.value    
+    })
+  }
+  if(name.value&&email.value&&services.value&&details.value)mailSender(link,mailData);
+  else console.log(modalWarningText.innerHTML='Formu Doldurunuz.');
+
+});
+
+const mailSender=async(link,data)=>{
+  try{
+    const result=await fetch(link,data);
+    if(!result.ok) throw new Error('Hattaaaaa');
+    modalWarningText.innerHTML='';
+    clearInputs();
+      
+  }catch(err){
+    console.log("Hata aldınız: ",err.message);
+  }
+}
+
+const clearInputs=()=>{
+  services.value=name.value=email.value=details.value='';
+}

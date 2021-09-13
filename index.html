@@ -32,7 +32,8 @@
     <div class="container-fluid">
         <div class="row custom-banner">
           <div class="col-md-2   d-flex align-items-center justify-content-center pt-3">
-              <a class="btn-custom pt-2" href="https://docs.google.com/forms/d/e/1FAIpQLSeoZaKtfKyS6iGdYk-S4B5iDUPvLnKLtI9fCg7ukmFV-vIULg/viewform" target="_blank">Teklif Al</a>
+              <a class="btn-custom pt-2" href="" data-toggle="modal" data-target="#getOfferModal"
+              >Teklif Al</a>
           </div>
           <div class="col-md-8 col-md-8 ">
               <img src="./imgs/font-logo.png" class="img-fluid"/>
@@ -42,7 +43,43 @@
             </div>
         </div>
     </div>
-     
+    <div class="modal fade" id="getOfferModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Teklif Al 📨</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <input  placeholder="Ad-Soyad" type="text" name="name" id="customerName" class="form-control mb-3" id="usr" required>
+                <input  placeholder="E-mail" type="text" name="email" id="customerMail"  class="form-control mb-3" id="pwd" required>
+                
+                <select name="cars" class="custom-select mb-3" id="customerService">
+                  <option selected>Almak istediğiniz Hizmeti Seçin</option>
+                  <option value="commercial">Kurumsal Web Sitesi</option>
+                  <option value="e-commerce">E-ticaret Web Sitesi</option>
+                  <option value="personal-website">Kişisel Web Site / Blog</option>
+                </select>     
+                <div class="form-group" >
+                  <label for="comment">Detaylar:</label>
+                  <textarea id="customerDetails" name="_subject" class="form-control" rows="5" id="comment" style="resize: none;"></textarea>
+                </div>
+              </div>
+              <button  type="submit" name="submit"  class="btn btn-custom" id="btnTakeOffer">Gönder</button>
+
+            </form>
+            
+          </div>
+          <div class="modal-footer text-center">
+            <div class="warning-text text-danger"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--Navbar=>Anasayfa,Hizmetlerimiz,Projelerimiz,İletişim,-->
     <nav class="navbar navbar-expand-lg  bg-custom-nav navbar-light sticky-top m-0 p-0">    
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -344,7 +381,7 @@
               <div class="col-md-4 mt-5 d-flex align-items-center justify-content-center">
                 <div class="content-about">
                   <h4>ATAYILMAZ BILIŞIM</h4>
-                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod in tempora temporibus eos earum optio cupiditate, repudiandae magnam veniam laborum dolorem? Sit earum dolor voluptate enim corporis quibusdam odit saepe ad commodi explicabo.</span>
+                  <span>Web site, Mobil uygulama, veri analizi ve daha bir çok durum için kaliteli, güvenilir ve yenilikçi yazılım çözümleri üretiyoruz. İletişim bölümünden bizimle irtibata geçerek ücretsiz bir şekilde bilgi ve destek alabilirsiniz.</span>
                 </div>
               </div>
               <div class="col-md-4 mt-5 d-flex align-items-center justify-content-center">

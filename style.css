@@ -363,3 +363,15 @@ form .txt-label{
         font-size: 40px;
     }
 }
+
+
+/* modal */
+.modal{
+    font-family: var(--font-dosis) !important;
+    color:var(--dark) !important;
+}
+.modal input,.modal textarea{
+    border:none;
+    background-color: #eee;
+    font-size: small;
+}
